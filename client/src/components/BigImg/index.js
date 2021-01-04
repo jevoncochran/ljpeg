@@ -1,13 +1,12 @@
 import React, { useState, useContext, useEffect } from "react";
 import { PageContext } from "../../context/pageContext";
-import { portraits } from "../../pages/Portraits/portraits";
+import { portraits } from "../../pages/Faces/portraits";
 import "./BigImg.scss";
 
 const BigImg = (props) => {
   const { collection, imageIndex } = useContext(PageContext);
   const [array, setArray] = useState("");
   const [actualIndex, setActualIndex] = useState(imageIndex);
-  const [address, setAddress] = useState("");
 
   const getNextPic = () => {
     if (actualIndex === array.length - 1) {
@@ -27,9 +26,8 @@ const BigImg = (props) => {
 
   useEffect(() => {
     switch (collection) {
-      case "portraits":
+      case "faces":
         setArray(portraits);
-        setAddress("faces");
         break;
       default:
         break;
@@ -50,7 +48,7 @@ const BigImg = (props) => {
       <div className="big-img-thumbnail-div">
         <p
           className="big-img-button-text"
-          onClick={() => props.history.push(`/${address}`)}
+          onClick={() => props.history.push(`/${collection}`)}
         >
           Show Thumbnails
         </p>

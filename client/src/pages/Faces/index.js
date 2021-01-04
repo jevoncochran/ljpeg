@@ -1,30 +1,24 @@
 import React, { useEffect, useContext } from "react";
-import "./Portraits.scss";
+import "./Faces.scss";
 import { portraits } from "./portraits";
 import Image from "../../components/Image";
 import { PageContext } from "../../context/pageContext";
 
-const Portraits = (props) => {
-  const {
-    collection,
-    imageIndex,
-    choosePortrait,
-    deactivateHome,
-    chooseImgIdx,
-  } = useContext(PageContext);
+const Faces = (props) => {
+  const { chooseFaces, deactivateHome, chooseImgIdx } = useContext(PageContext);
 
   useEffect(() => {
     deactivateHome();
   }, [deactivateHome]);
 
   const renderImage = (id) => {
-    choosePortrait();
+    chooseFaces();
     chooseImgIdx(id);
     props.history.push(`/faces/${id}`);
   };
 
   return (
-    <div className="portraits">
+    <div className="faces">
       {portraits.map((portrait) => (
         <div onClick={() => renderImage(portrait.id)}>
           <Image
@@ -39,4 +33,4 @@ const Portraits = (props) => {
   );
 };
 
-export default Portraits;
+export default Faces;
