@@ -5,8 +5,9 @@ import PageProvider from "./context/pageContext";
 // page/component imports
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
-import Portraits from "./pages/Portraits";
+import Faces from "./pages/Faces";
 import BigImg from "./components/BigImg";
+import Places from "./pages/Places";
 
 function App() {
   return (
@@ -15,8 +16,9 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route exact path="/faces" component={Portraits} />
+          <Route exact path="/faces" component={Faces} />
           <Route path="/faces/:id" component={BigImg} />
+          <Route path="/places" component={Places} />
         </Switch>
       </Router>
     </PageProvider>

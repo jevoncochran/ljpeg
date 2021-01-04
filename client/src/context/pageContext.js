@@ -15,8 +15,8 @@ const PageProvider = (props) => {
     setAtHome(false);
   };
 
-  const choosePortrait = () => {
-    setCollection("portraits");
+  const chooseFaces = () => {
+    setCollection("faces");
   };
 
   const chooseImgIdx = (id) => {
@@ -31,7 +31,7 @@ const PageProvider = (props) => {
         imageIndex,
         activateHome,
         deactivateHome,
-        choosePortrait,
+        chooseFaces,
         chooseImgIdx,
       }}
     >
