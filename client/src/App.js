@@ -1,9 +1,12 @@
 import "./App.css";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import PageProvider from "./context/pageContext";
+
+// page/component imports
 import Nav from "./components/Nav";
 import Home from "./pages/Home";
 import Portraits from "./pages/Portraits";
-import PageProvider from "./context/pageContext";
+import BigImg from "./components/BigImg";
 
 function App() {
   return (
@@ -12,7 +15,8 @@ function App() {
         <Nav />
         <Switch>
           <Route exact path="/" component={Home} />
-          <Route path="/faces" component={Portraits} />
+          <Route exact path="/faces" component={Portraits} />
+          <Route path="/faces/:id" component={BigImg} />
         </Switch>
       </Router>
     </PageProvider>

@@ -4,6 +4,8 @@ const PageContext = React.createContext();
 
 const PageProvider = (props) => {
   const [atHome, setAtHome] = useState(true);
+  const [collection, setCollection] = useState("");
+  const [imageIndex, setImageIndex] = useState(null);
 
   const activateHome = () => {
     setAtHome(true);
@@ -13,8 +15,26 @@ const PageProvider = (props) => {
     setAtHome(false);
   };
 
+  const choosePortrait = () => {
+    setCollection("portraits");
+  };
+
+  const chooseImgIdx = (id) => {
+    setImageIndex(id - 1);
+  };
+
   return (
-    <PageContext.Provider value={{ atHome, activateHome, deactivateHome }}>
+    <PageContext.Provider
+      value={{
+        atHome,
+        collection,
+        imageIndex,
+        activateHome,
+        deactivateHome,
+        choosePortrait,
+        chooseImgIdx,
+      }}
+    >
       {props.children}
     </PageContext.Provider>
   );
