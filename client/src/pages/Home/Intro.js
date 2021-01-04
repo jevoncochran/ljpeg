@@ -7,7 +7,7 @@ const Intro = () => {
   return (
     <div className="intro">
       <div className="intro-text-div">
-        <p className="intro-title">Hi, I'm L.</p>
+        <p className="intro-title">Peace, I'm L.</p>
         <p className="intro-p">
           Compton-born, Chicago-based Photographer and Creative
         </p>
