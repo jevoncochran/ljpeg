@@ -9,7 +9,7 @@ const Home = () => {
 
   useEffect(() => {
     activateHome();
-  }, []);
+  }, [activateHome]);
 
   return (
     <div className="home">
