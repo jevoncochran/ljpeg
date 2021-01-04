@@ -7,7 +7,7 @@ import pregnant_chick from "../../assets/images/portraits/pregnant-chick.jpg";
 import bald_rihanna from "../../assets/images/portraits/bald-rihanna.jpg";
 import beach_boy from "../../assets/images/portraits/beach-boy.jpg";
 
-export const portraits = [
+const portraits = [
   { image: jevonOnBeach },
   { image: maskedCrip },
   { image: huey },
@@ -17,3 +17,9 @@ export const portraits = [
   { image: pregnant_chick },
   { image: bald_rihanna },
 ];
+
+portraits.forEach((portrait, i) => {
+  portrait.id = i + 1;
+});
+
+export { portraits };

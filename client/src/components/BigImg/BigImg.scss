@@ -1,0 +1,32 @@
+.big-img {
+  //   border: 3px solid black;
+  width: 100%;
+}
+
+.big-img-direction-div {
+  //   border: 1px dashed black;
+  display: flex;
+  justify-content: center;
+}
+
+.big-img-button-text {
+  font-size: 2rem;
+  margin-right: 1%;
+}
+
+.big-img-thumbnail-div {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 2%;
+}
+
+.big-img-img-container {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.big-img-img {
+  width: 40%;
+  height: auto;
+}
