@@ -6,6 +6,7 @@ const PageProvider = (props) => {
   const [atHome, setAtHome] = useState(true);
   const [collection, setCollection] = useState("");
   const [imageIndex, setImageIndex] = useState(null);
+  const [rootPath, setRootPath] = useState("");
 
   const activateHome = () => {
     setAtHome(true);
@@ -15,12 +16,16 @@ const PageProvider = (props) => {
     setAtHome(false);
   };
 
-  const chooseFaces = () => {
-    setCollection("faces");
+  const chooseCollection = (collection) => {
+    setCollection(collection);
   };
 
   const chooseImgIdx = (id) => {
     setImageIndex(id - 1);
+  };
+
+  const changeRootPath = (newPath) => {
+    setRootPath(newPath);
   };
 
   return (
@@ -29,10 +34,12 @@ const PageProvider = (props) => {
         atHome,
         collection,
         imageIndex,
+        rootPath,
         activateHome,
         deactivateHome,
-        chooseFaces,
+        chooseCollection,
         chooseImgIdx,
+        changeRootPath,
       }}
     >
       {props.children}
