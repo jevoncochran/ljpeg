@@ -11,9 +11,9 @@ export const portraits = [
   { image: jevonOnBeach },
   { image: maskedCrip },
   { image: huey },
+  { image: beach_boy },
   { image: kamryn },
   { image: malik },
   { image: pregnant_chick },
   { image: bald_rihanna },
-  { image: beach_boy },
 ];
