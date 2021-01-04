@@ -17,7 +17,7 @@ const Intro = () => {
       <div className="intro-social-links-div">
         <a
           className="intro-social-link"
-          href="https://www.facebook.com/AceMawdo"
+          href="https://www.facebook.com/LJPEG-112130923832274"
           target="_blank"
           rel="noopener noreferrer"
         >
@@ -27,7 +27,7 @@ const Intro = () => {
         </a>
         <a
           className="intro-social-link"
-          href="https://www.instagram.com/_l.jpeg/f"
+          href="https://www.instagram.com/_l.jpeg/"
           target="_blank"
           rel="noopener noreferrer"
         >
