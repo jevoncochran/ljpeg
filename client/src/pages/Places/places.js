@@ -20,7 +20,13 @@ export const places = [
     collection: "Colombia",
     directory: "colombia",
   },
-  { image: brazil, place: "Brazil", alt: "Brazil" },
+  {
+    image: brazil,
+    place: "Brazil",
+    alt: "Brazil",
+    collection: "Brazil",
+    directory: "brazil",
+  },
   { image: cuba, place: "Cuba", alt: "Cuba" },
   {
     image: dominican_republic,

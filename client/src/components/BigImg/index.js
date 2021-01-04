@@ -2,6 +2,7 @@ import React, { useState, useContext, useEffect } from "react";
 import { PageContext } from "../../context/pageContext";
 import { portraits } from "../../pages/Faces/portraits";
 import { colombia } from "../../pages/Places/colombia";
+import { brazil } from "../../pages/Places/brazil";
 import "./BigImg.scss";
 
 const BigImg = (props) => {
@@ -40,6 +41,9 @@ const BigImg = (props) => {
         break;
       case "Colombia":
         setImageArray(colombia);
+        break;
+      case "Brazil":
+        setImageArray(brazil);
         break;
       default:
         break;
