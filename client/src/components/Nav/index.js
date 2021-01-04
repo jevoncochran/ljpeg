@@ -7,7 +7,12 @@ const Nav = () => {
   const { atHome, activateHome, deactivateHome } = useContext(PageContext);
 
   return (
-    <div className="nav" style={{ position: atHome ? "absolute" : "relative" }}>
+    <div
+      className="nav"
+      style={{
+        position: atHome ? "absolute" : "relative",
+      }}
+    >
       <div className="nav-pages-div">
         <Link to="/" className="nav-page" onClick={activateHome}>
           Home

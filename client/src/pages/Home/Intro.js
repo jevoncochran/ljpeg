@@ -1,7 +1,6 @@
 import React from "react";
 import "./Home.scss";
 import { FaFacebookF, FaInstagram, FaTwitter } from "react-icons/fa";
-import signature from "../../assets/images/home/l-signature.png";
 
 const Intro = () => {
   return (
@@ -12,8 +11,6 @@ const Intro = () => {
           Compton-born, Chicago-based Photographer and Creative
         </p>
       </div>
-
-      <img className="intro-signature" src={signature} alt="L's signature" />
       <div className="intro-social-links-div">
         <a
           className="intro-social-link"
