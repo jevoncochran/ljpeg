@@ -4,12 +4,23 @@ import { places } from "./places";
 import Grid from "@material-ui/core/Grid";
 import { PageContext } from "../../context/pageContext";
 
-const Places = () => {
-  const { deactivateHome } = useContext(PageContext);
+const Places = (props) => {
+  const {
+    deactivateHome,
+    chooseCollection,
+    changeRootPath,
+    rootPath,
+  } = useContext(PageContext);
 
   useEffect(() => {
     deactivateHome();
-  }, [deactivateHome]);
+    changeRootPath("/places");
+  }, [deactivateHome, changeRootPath]);
+
+  const renderCollection = (place, collection) => {
+    chooseCollection(collection);
+    props.history.push(`${rootPath}/${place}`);
+  };
 
   return (
     <Grid className="places" container spacing={2}>
@@ -17,7 +28,11 @@ const Places = () => {
         <Grid key={place.place} className="places-img-div" item xs={4}>
           <div
             className="places-img"
-            style={{ backgroundImage: `url(${place.image})` }}
+            style={{
+              backgroundImage: `url(${place.image})`,
+              backgroundPosition: `${place.bg_position}`,
+            }}
+            onClick={() => renderCollection(place.directory, place.collection)}
           ></div>
           <p className="places-name">{place.place}</p>
         </Grid>

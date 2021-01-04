@@ -8,6 +8,7 @@ import Home from "./pages/Home";
 import Faces from "./pages/Faces";
 import BigImg from "./components/BigImg";
 import Places from "./pages/Places";
+import Place from "./pages/Places/Place";
 
 function App() {
   return (
@@ -18,7 +19,9 @@ function App() {
           <Route exact path="/" component={Home} />
           <Route exact path="/faces" component={Faces} />
           <Route path="/faces/:id" component={BigImg} />
-          <Route path="/places" component={Places} />
+          <Route exact path="/places" component={Places} />
+          <Route exact path="/places/:place" component={Place} />
+          <Route path="/places/:place/:id" component={BigImg} />
         </Switch>
       </Router>
     </PageProvider>

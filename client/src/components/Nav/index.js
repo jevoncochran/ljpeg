@@ -4,7 +4,18 @@ import { PageContext } from "../../context/pageContext";
 import "./Nav.scss";
 
 const Nav = () => {
-  const { atHome, activateHome, deactivateHome } = useContext(PageContext);
+  const {
+    atHome,
+    activateHome,
+    deactivateHome,
+    // changeRootPath,
+    // rootPath,
+  } = useContext(PageContext);
+
+  // const goToPage = (path) => {
+  //   changeRootPath(path);
+  //   deactivateHome();
+  // };
 
   return (
     <div

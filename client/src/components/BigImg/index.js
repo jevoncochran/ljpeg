@@ -1,15 +1,16 @@
 import React, { useState, useContext, useEffect } from "react";
 import { PageContext } from "../../context/pageContext";
 import { portraits } from "../../pages/Faces/portraits";
+import { colombia } from "../../pages/Places/colombia";
 import "./BigImg.scss";
 
 const BigImg = (props) => {
-  const { collection, imageIndex } = useContext(PageContext);
-  const [array, setArray] = useState("");
+  const { collection, imageIndex, rootPath } = useContext(PageContext);
+  const [imageArray, setImageArray] = useState("");
   const [actualIndex, setActualIndex] = useState(imageIndex);
 
   const getNextPic = () => {
-    if (actualIndex === array.length - 1) {
+    if (actualIndex === imageArray.length - 1) {
       setActualIndex(0);
     } else {
       setActualIndex(actualIndex + 1);
@@ -18,16 +19,27 @@ const BigImg = (props) => {
 
   const getPrevPic = () => {
     if (actualIndex === 0) {
-      setActualIndex(array.length - 1);
+      setActualIndex(imageArray.length - 1);
     } else {
       setActualIndex(actualIndex - 1);
+    }
+  };
+
+  const showThumbnails = () => {
+    if (rootPath === "/places") {
+      props.history.push(`${rootPath}/${collection.toLowerCase()}`);
+    } else {
+      props.history.push(`/${collection.toLowerCase()}`);
     }
   };
 
   useEffect(() => {
     switch (collection) {
       case "faces":
-        setArray(portraits);
+        setImageArray(portraits);
+        break;
+      case "Colombia":
+        setImageArray(colombia);
         break;
       default:
         break;
@@ -46,19 +58,16 @@ const BigImg = (props) => {
         </p>
       </div>
       <div className="big-img-thumbnail-div">
-        <p
-          className="big-img-button-text"
-          onClick={() => props.history.push(`/${collection}`)}
-        >
+        <p className="big-img-button-text" onClick={showThumbnails}>
           Show Thumbnails
         </p>
       </div>
       <div className="big-img-img-container">
-        {array !== "" && (
+        {imageArray !== "" && (
           <img
             className="big-img-img"
-            src={array[actualIndex].image}
-            alt={array[actualIndex].alt}
+            src={imageArray[actualIndex].image}
+            alt={imageArray[actualIndex].alt}
           />
         )}
       </div>
