@@ -1,8 +1,8 @@
 import React, { useEffect, useContext } from "react";
 import "./Home.scss";
-import ljp from "../../assets/images/home/ljp.jpg";
 import Intro from "./Intro";
 import { PageContext } from "../../context/pageContext";
+import tasha from "../../assets/images/home/tasha.jpg";
 
 const Home = () => {
   const { activateHome } = useContext(PageContext);
@@ -15,7 +15,7 @@ const Home = () => {
     <div className="home">
       <div
         className="home-img"
-        style={{ backgroundImage: `url(${ljp})` }}
+        style={{ backgroundImage: `url(${tasha})` }}
       ></div>
       <Intro />
     </div>
