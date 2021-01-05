@@ -1,6 +1,6 @@
 import React, { useEffect, useContext } from "react";
 import "./Home.scss";
-import ljp from "../../assets/images/home/ljpeg-home-background.jpg";
+import ljp from "../../assets/images/home/ljp.jpg";
 import Intro from "./Intro";
 import { PageContext } from "../../context/pageContext";
 
