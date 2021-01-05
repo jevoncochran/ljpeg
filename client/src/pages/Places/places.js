@@ -32,7 +32,7 @@ export const places = [
     image: dominican_republic,
     place: "Dominican Republic",
     alt: "Dominican Republic",
-    collection: "Dominican Republic",
+    collection: "Dominican-Republic",
     directory: "dominican-republic",
   },
   { image: puerto_rico, place: "Puerto Rico", alt: "Puerto Rico" },

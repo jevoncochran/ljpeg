@@ -19,7 +19,7 @@ const Place = (props) => {
   }, [deactivateHome]);
 
   if (place === "dominican-republic") {
-    return <DRLayout />;
+    return <DRLayout renderImage={renderImage} />;
   }
 
   return <MasonLayout renderImage={renderImage} />;
