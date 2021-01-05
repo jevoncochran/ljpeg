@@ -3,6 +3,7 @@ import { PageContext } from "../../context/pageContext";
 import { portraits } from "../../pages/Faces/portraits";
 import { colombia } from "../../pages/Places/colombia";
 import { brazil } from "../../pages/Places/brazil";
+import { dr } from "../../pages/Places/dr";
 import "./BigImg.scss";
 
 const BigImg = (props) => {
@@ -44,6 +45,9 @@ const BigImg = (props) => {
         break;
       case "Brazil":
         setImageArray(brazil);
+        break;
+      case "Dominican-Republic":
+        setImageArray(dr);
         break;
       default:
         break;

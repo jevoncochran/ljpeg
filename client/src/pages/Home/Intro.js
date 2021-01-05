@@ -6,9 +6,14 @@ const Intro = () => {
   return (
     <div className="intro">
       <div className="intro-text-div">
-        <p className="intro-title">Peace, I'm L.</p>
+        <p className="intro-title">Peace world, I'm L.</p>
         <p className="intro-p">
-          Compton-born, Chicago-based Photographer and Creative
+          I’m an up-and-coming photographer. I picked up a camera for the same
+          reason anybody else might… I wanted to show others what I see.
+        </p>
+        <p className="intro-p">
+          Feel free to take a look. Just keep in mind that ima artist, and i’m
+          sensitive about my shit!
         </p>
       </div>
       <div className="intro-social-links-div">
