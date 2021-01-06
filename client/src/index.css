@@ -19,3 +19,7 @@ code {
   font-family: "Amatic SC", cursive;
   /* background: #bdac5e; */
 }
+
+::-webkit-scrollbar {
+  display: none;
+}

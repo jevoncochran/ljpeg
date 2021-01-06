@@ -27,6 +27,7 @@ const BigImg = (props) => {
     }
   };
 
+  // may need to change this because the directory property better reflects the dynamic variable here
   const showThumbnails = () => {
     if (rootPath === "/places") {
       props.history.push(`${rootPath}/${collection.toLowerCase()}`);

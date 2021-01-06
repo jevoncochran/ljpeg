@@ -5,6 +5,7 @@ import { PageContext } from "../../context/pageContext";
 import { portraits } from "../../pages/Faces/portraits";
 import { colombia } from "../../pages/Places/colombia";
 import { brazil } from "../../pages/Places/brazil";
+import { partyNoire } from "../../pages/Events/partyNoire";
 
 const MasonLayout = (props) => {
   const { collection } = useContext(PageContext);
@@ -20,6 +21,9 @@ const MasonLayout = (props) => {
         break;
       case "Brazil":
         setImageArray(brazil);
+        break;
+      case "Party-Noire":
+        setImageArray(partyNoire);
         break;
       default:
         break;

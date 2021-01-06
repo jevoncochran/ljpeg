@@ -12,27 +12,32 @@ const Places = (props) => {
     rootPath,
   } = useContext(PageContext);
 
-  useEffect(() => {
-    deactivateHome();
-    changeRootPath("/places");
-  }, [deactivateHome, changeRootPath]);
-
   const renderCollection = (place, collection) => {
     chooseCollection(collection);
     props.history.push(`${rootPath}/${place}`);
   };
 
+  useEffect(() => {
+    deactivateHome();
+    changeRootPath("/places");
+  }, [deactivateHome, changeRootPath]);
+
   return (
     <Grid className="places" container spacing={2}>
       {places.map((place) => (
-        <Grid key={place.place} className="places-img-div" item xs={4}>
+        <Grid
+          key={place.place}
+          className="places-img-div"
+          item
+          xs={4}
+          onClick={() => renderCollection(place.directory, place.collection)}
+        >
           <div
             className="places-img"
             style={{
               backgroundImage: `url(${place.image})`,
               backgroundPosition: `${place.bg_position}`,
             }}
-            onClick={() => renderCollection(place.directory, place.collection)}
           ></div>
           <p className="places-name">{place.place}</p>
         </Grid>
