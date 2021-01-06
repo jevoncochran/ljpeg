@@ -4,6 +4,7 @@ import { portraits } from "../../pages/Faces/portraits";
 import { colombia } from "../../pages/Places/colombia";
 import { brazil } from "../../pages/Places/brazil";
 import { dr } from "../../pages/Places/dr";
+import { partyNoire } from "../../pages/Events/partyNoire";
 import "./BigImg.scss";
 
 const BigImg = (props) => {
@@ -27,8 +28,9 @@ const BigImg = (props) => {
     }
   };
 
+  // may need to change this because the directory property better reflects the dynamic variable here
   const showThumbnails = () => {
-    if (rootPath === "/places") {
+    if (rootPath === "/places" || rootPath === "/events") {
       props.history.push(`${rootPath}/${collection.toLowerCase()}`);
     } else {
       props.history.push(`/${collection.toLowerCase()}`);
@@ -48,6 +50,9 @@ const BigImg = (props) => {
         break;
       case "Dominican-Republic":
         setImageArray(dr);
+        break;
+      case "Party-Noire":
+        setImageArray(partyNoire);
         break;
       default:
         break;
