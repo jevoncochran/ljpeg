@@ -23,7 +23,7 @@ function App() {
         <Route path="/faces/:id" component={BigImg} />
         <Route exact path="/places" component={Places} />
         {/* <Route exact path="/places/:place" component={Place} /> */}
-        <Route path="/places/:place/:id" component={BigImg} />
+        <Route path={`${rootPath}/:directory/:id`} component={BigImg} />
         <Route exact path="/events" component={Events} />
         <Route path={`${rootPath}/:directory`} component={Collection} />
       </Switch>
