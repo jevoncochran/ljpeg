@@ -5,7 +5,9 @@ import { colombia } from "../../pages/Places/colombia";
 import { brazil } from "../../pages/Places/brazil";
 import { dr } from "../../pages/Places/dr";
 import { partyNoire } from "../../pages/Events/partyNoire";
+import { tdeXmas2018 } from "../../pages/Events/tdeXmas2018";
 import "./BigImg.scss";
+import { futureHood } from "../../pages/Events/futureHood";
 
 const BigImg = (props) => {
   const { collection, imageIndex, rootPath } = useContext(PageContext);
@@ -53,6 +55,12 @@ const BigImg = (props) => {
         break;
       case "Party-Noire":
         setImageArray(partyNoire);
+        break;
+      case "TDE-Xmas":
+        setImageArray(tdeXmas2018);
+        break;
+      case "Future-Hood":
+        setImageArray(futureHood);
         break;
       default:
         break;
