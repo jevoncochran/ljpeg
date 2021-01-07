@@ -6,6 +6,8 @@ import { portraits } from "../../pages/Faces/portraits";
 import { colombia } from "../../pages/Places/colombia";
 import { brazil } from "../../pages/Places/brazil";
 import { partyNoire } from "../../pages/Events/partyNoire";
+import { tdeXmas2018 } from "../../pages/Events/tdeXmas2018";
+import { futureHood } from "../../pages/Events/futureHood";
 
 const MasonLayout = (props) => {
   const { collection } = useContext(PageContext);
@@ -24,6 +26,12 @@ const MasonLayout = (props) => {
         break;
       case "Party-Noire":
         setImageArray(partyNoire);
+        break;
+      case "TDE-Xmas":
+        setImageArray(tdeXmas2018);
+        break;
+      case "Future-Hood":
+        setImageArray(futureHood);
         break;
       default:
         break;
