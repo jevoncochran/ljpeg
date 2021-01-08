@@ -1,6 +1,7 @@
 import React, { useState, useContext, useEffect } from "react";
 import { PageContext } from "../../context/pageContext";
 import { portraits } from "../../pages/Faces/portraits";
+import { chicago } from "../../pages/Places/chicago";
 import { colombia } from "../../pages/Places/colombia";
 import { brazil } from "../../pages/Places/brazil";
 import { dr } from "../../pages/Places/dr";
@@ -43,6 +44,9 @@ const BigImg = (props) => {
     switch (collection) {
       case "faces":
         setImageArray(portraits);
+        break;
+      case "Chicago":
+        setImageArray(chicago);
         break;
       case "Colombia":
         setImageArray(colombia);

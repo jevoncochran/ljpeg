@@ -3,6 +3,7 @@ import "./MasonLayout.scss";
 import Image from "../../components/Image";
 import { PageContext } from "../../context/pageContext";
 import { portraits } from "../../pages/Faces/portraits";
+import { chicago } from "../../pages/Places/chicago";
 import { colombia } from "../../pages/Places/colombia";
 import { brazil } from "../../pages/Places/brazil";
 import { partyNoire } from "../../pages/Events/partyNoire";
@@ -17,6 +18,9 @@ const MasonLayout = (props) => {
     switch (collection) {
       case "faces":
         setImageArray(portraits);
+        break;
+      case "Chicago":
+        setImageArray(chicago);
         break;
       case "Colombia":
         setImageArray(colombia);
