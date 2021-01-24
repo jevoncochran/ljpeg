@@ -30,7 +30,7 @@ const ComingSoon = () => {
           className={inputActive ? "cs-cta-btn-hide" : "cs-cta-btn"}
           onClick={() => setInputActive(true)}
         >
-          DROP IT LIKE IT'S HOT BABY
+          LET ME KNOW WHEN IT DROPS
         </button>
         <br />
         <form onSubmit={sendRequest}>
