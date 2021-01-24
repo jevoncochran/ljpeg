@@ -15,7 +15,7 @@ function App() {
   const { rootPath } = useContext(PageContext);
   return (
     <Router>
-      <Nav />
+      {/* <Nav /> */}
       <Switch>
         <Route exact path="/" component={Home} />
         <Route exact path="/faces" component={Faces} />
