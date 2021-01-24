@@ -1,8 +1,9 @@
 import React, { useEffect, useContext } from "react";
 import "./Home.scss";
-import Intro from "./Intro";
+// import Intro from "./Intro";
 import { PageContext } from "../../context/pageContext";
-import tasha from "../../assets/images/home/tasha.jpg";
+// import ljpegPlaceHolder from "../../assets/images/home/ljpeg_placeholder.jpg";
+import ComingSoon from "../../components/ComingSoon";
 
 const Home = () => {
   const { activateHome } = useContext(PageContext);
@@ -13,11 +14,11 @@ const Home = () => {
 
   return (
     <div className="home">
-      <div
+      {/* <div
         className="home-img"
-        style={{ backgroundImage: `url(${tasha})` }}
-      ></div>
-      <Intro />
+        style={{ backgroundImage: `url(${ljpegPlaceHolder})` }}
+      ></div> */}
+      <ComingSoon />
     </div>
   );
 };
