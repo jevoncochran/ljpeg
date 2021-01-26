@@ -33,7 +33,7 @@ const ComingSoon = () => {
           LET ME KNOW WHEN IT DROPS
         </button>
         <br />
-        <form onSubmit={sendRequest}>
+        <form className="cs-cta-form" onSubmit={sendRequest}>
           <input
             className={inputActive ? "cs-cta-input" : "cs-cta-input-hide"}
             type="text"

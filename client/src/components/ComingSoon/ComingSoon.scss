@@ -1,7 +1,10 @@
+$mobile: 500px;
+
 .cs {
   width: 100%;
   height: 100%;
   position: relative;
+  // background-color: white;
 }
 
 .cs-img {
@@ -13,7 +16,6 @@
 .cs-site-title {
   //   border: 1px dashed white;
   font-size: 6rem;
-  position: absolute;
   color: #fff;
   position: relative;
   bottom: 95%;
@@ -66,4 +68,63 @@
 
 ::placeholder {
   color: #fff;
+}
+
+@media (max-width: $mobile) {
+  .cs-img {
+    width: 100%;
+    height: 70%;
+    background-size: cover;
+    background-position: 75% 0;
+  }
+
+  .cs-site-title {
+    // border: 1px dashed green;
+    font-size: 6rem;
+    color: #fff;
+    position: relative;
+    top: -20%;
+    left: 25%;
+    letter-spacing: 8px;
+  }
+
+  .cs-cta-container {
+    // border: 1px solid #fff;
+    top: -15%;
+    left: 0;
+    height: 30%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .cs-cta-txt {
+    font-size: 3rem;
+    color: #fff;
+    margin-bottom: 1%;
+    //   font-weight: 600;
+  }
+
+  .cs-cta-btn {
+    font-size: 2rem;
+    width: 80%;
+  }
+
+  .cs-cta-form {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .cs-cta-input {
+    width: 80%;
+    height: 8vh;
+    background: none;
+    border: 4px solid #fff;
+    color: #fff;
+    font-size: 2rem;
+    padding: 1%;
+    font-weight: 600;
+  }
 }
